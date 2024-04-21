@@ -22,7 +22,7 @@ def ask(question):
     url = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Api-Key AQVNw3ylZdvbaDGdt2fsfqoQDJtTFHlBFcA75AM9"
+        "Authorization": "" #ваш Api-Key от YandexGPT api
     }
 
     response = requests.post(url, headers=headers, json=prompt)
