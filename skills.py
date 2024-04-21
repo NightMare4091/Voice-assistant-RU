@@ -9,7 +9,7 @@ import yagpt
 from datetime import datetime
 from bs4 import BeautifulSoup as BS
 
-weather_api = "2a4ff86f9aaa70041ec8e82db64abf56"
+weather_api = "" # API-ключ openweather
 
 def joke(*args):
     r = requests.get("https://nekdo.ru/random/")
