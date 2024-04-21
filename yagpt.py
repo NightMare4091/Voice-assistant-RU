@@ -1,5 +1,6 @@
 import requests
 
+GPT_key = "" # API-ключ yagpt
 def ask(question):
     prompt = {
         "modelUri": "gpt://b1go49j0b7vtucfjk8dm/yandexgpt-lite",
@@ -22,12 +23,10 @@ def ask(question):
     url = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "" #ваш Api-Key от YandexGPT api
+        "Authorization": GPT_key
     }
 
     response = requests.post(url, headers=headers, json=prompt)
     res = response.text.split('"')[13]
     table = str.maketrans({'`': '', '(': '', ')': ' ', '@': 'at ', '_': ' ', '*': ''})
     return res.translate(table)
-
-
