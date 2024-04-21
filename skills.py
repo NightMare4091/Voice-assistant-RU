@@ -41,7 +41,7 @@ def offpc(*args):
     os.system("shutdown")
 
 def weather(*args):
-    params = {'q': 'Ufa', 'units': 'metric', 'lang': 'ru', 'appid': '2a4ff86f9aaa70041ec8e82db64abf56'}
+    params = {'q': 'Ufa', 'units': 'metric', 'lang': 'ru', 'appid': '#ваш Api-Key от openweather'}
     response = requests.get(f'https://api.openweathermap.org/data/2.5/weather', params=params)
     if not response:
         raise
