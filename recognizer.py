@@ -4,6 +4,7 @@ from words import data_set
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from voice_v1 import speak
+from skills import *
 
 def recognize(data):
     vectorizer = CountVectorizer()
