@@ -9,6 +9,7 @@ import yagpt
 from datetime import datetime
 from bs4 import BeautifulSoup as BS
 
+weather_api = "2a4ff86f9aaa70041ec8e82db64abf56"
 
 def joke(*args):
     r = requests.get("https://nekdo.ru/random/")
@@ -41,7 +42,7 @@ def offpc(*args):
     os.system("shutdown")
 
 def weather(*args):
-    params = {'q': 'Ufa', 'units': 'metric', 'lang': 'ru', 'appid': '#ваш Api-Key от openweather'}
+    params = {'q': 'Ufa', 'units': 'metric', 'lang': 'ru', 'appid': weather_api}
     response = requests.get(f'https://api.openweathermap.org/data/2.5/weather', params=params)
     if not response:
         raise
@@ -53,5 +54,3 @@ def offBot(*args):
 
 def passive(*args):
     pass
-
-
